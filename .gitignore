@@ -1,3 +1,4 @@
 LLaVA/
 third_party/
 ckpts/
+test.py

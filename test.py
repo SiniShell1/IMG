@@ -165,10 +165,12 @@ from third_party.src.flux.modules.layers import ImageProjModel
 from third_party.src.flux.util import load_checkpoint
 from third_party.src.flux.xflux_pipeline import XFluxPipeline
 import numpy as np
-
+flux_device = "cuda:0"
+lm_device = "cuda:1"
 args_ip_repo_id = "XLabs-AI/flux-ip-adapter"
 args_ip_name = "ip_adapter.safetensors"
 args_model_type = "flux-dev"
+# args_model_type = "/nas/shared/sys2/chuanhaoyan/workspace/flux"
 args_ip_local_path = None
 args_offload = False
 # os.environ['HF_ENDPOINT'] = 'https://hf-mirror.com'

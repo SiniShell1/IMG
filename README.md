@@ -1,6 +1,23 @@
 
 
-### Inference
+# Inference
+
+## directory structure
+- ckpts
+    - image_encoder/
+    - flux_resampler.pth
+    - ip_adapter.bin
+    - resampler.pth
+    - sdxl_resampler.pth
+- LLaVA
+- third-party
+    - ip_adapter
+    - open_clip
+    - flux
+    - score_models
+- src
+- assets
+
 ## for sdxl
 1. git clone git@github.com:haotian-liu/LLaVA.git
 2. cd LLaVA
@@ -9,9 +26,6 @@
 5. pip install --upgrade accelerate transformers==4.49.0 gradio
 
 ## for flux
-6. pip install opencv-python optimum
-<!-- 7. pip install torch==2.4  -->
-8. pip install optimum-quanto
-pip install onnxruntime
-### Training
+6. pip install opencv-python optimum optimum-quanto onnxruntime
+# Training
 
