@@ -139,7 +139,6 @@ def generate_images(text_prompt, seed, sdxl_org_guidance_scale, sdxl_ip_guidance
     sdxl_image = Image.new('RGB', (total_width, total_height))
     for i, img in enumerate(all_images):
         sdxl_image.paste(img, (0, i * all_images[0].height))
-
     return sdxl_image
 
 iface = gr.Interface(
@@ -148,7 +147,11 @@ iface = gr.Interface(
     gr.Number(label="Seed", value=306),
     gr.Slider(label="Original Guidance Scale", minimum=1, maximum=10, step=0.1, value=7.5),
     gr.Slider(label="IP Guidance Scale", minimum=1, maximum=10, step=0.1, value=7.5)], 
-    outputs=gr.Image(label="Generated Image 1", type="pil")  
+    outputs=gr.Image(label="Generated Image 1", type="pil"), 
+    examples=[
+        ["The rectangular mirror was hung above the white sink.", 115, 7.5, 7.5],
+        ["The city of London on Mars", 305, 7.5, 7.5] 
+    ]
 )
 
 iface.launch()

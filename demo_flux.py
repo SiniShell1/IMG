@@ -166,7 +166,10 @@ iface = gr.Interface(
         gr.Slider(0, 10, step=0.1, value=3.5, label="CFG Original"), 
         gr.Slider(0, 10, step=0.1, value=3.5, label="CFG IP"),
         gr.Slider(0, 100, step=1, value=30, label="Num Steps")],
-    outputs=gr.Image(label="Generated Image", type="pil")  
+    outputs=gr.Image(label="Generated Image", type="pil"),
+    examples=[
+        ["a fish near a car", 2, 3.5, 3.5, 30],
+    ]
 )
 
 iface.launch()
